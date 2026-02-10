@@ -7,11 +7,10 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // Title for your status page
-  title: "AcoFork 的状态页",
+  title: "Nether_wart 的状态页",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/afoim', label: 'GitHub' },
-    { link: 'https://blog.acofork.com/', label: '博客' },
+    { link: 'https://github.com/Nether_wart', label: 'GitHub' },
   ],
 }
 
@@ -54,200 +53,23 @@ const workerConfig: WorkerConfig = {
     //   //checkLocationWorkerRoute: 'https://xxx.example.com',
     // },
     {
-      id: 'uptimekuma',
-      name: 'UptimeKuma',
-      method: 'HEAD',
-      target: 'https://acofork-uptime.zeabur.app/status/acofork',
-      statusPageLink: 'https://acofork-uptime.zeabur.app/status/acofork',
+      id:'openlist_M1816',
+      name:'OpenList in termux(MeiZu M1816)',
+      method:'HEAD',
+      target:'https://list.netherwart.qzz.io/api/public/settings',
+      statusPageLink: 'https://list.netherwart.qzz.io/',
       hideLatencyChart: false,
       expectedCodes: [200],
-      timeout: 10000,
     },
     {
-      id: 'blog',
-      name: '博客总入口（自动分流）',
-      method: 'HEAD',
-      target: 'https://blog.acofork.com/',
-      statusPageLink: 'https://blog.acofork.com/',
+      id:'chat_nix',
+      name:'Spring in NixOS',
+      method:'HEAD',
+      target:'https://netherwart.qzz.io/api/chat/online',
       hideLatencyChart: false,
       expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'blog_eo',
-      name: '博客（EdgeOne Pages国内节点）',
-      method: 'HEAD',
-      target: 'https://eo-blog.acofork.com/',
-      statusPageLink: 'https://eo-blog.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'blog_cf',
-      name: '博客（Cloudflare Pages海外节点）',
-      method: 'HEAD',
-      target: 'https://cf-blog.acofork.com/',
-      statusPageLink: 'https://cf-blog.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'umami_nas',
-      name: 'Umami（NAS）',
-      method: 'HEAD',
-      target: 'https://umami.acofork.com/',
-      statusPageLink: 'https://umami.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'vw_nas',
-      name: 'VaultWarden（NAS）',
-      method: 'HEAD',
-      target: 'https://vw.acofork.com/',
-      statusPageLink: 'https://vw.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'pan_nas',
-      name: 'OpenList（NAS）',
-      method: 'GET',
-      target: 'https://pan.acofork.com/',
-      statusPageLink: 'https://pan.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'fnos_nas',
-      name: '飞牛（NAS）',
-      method: 'HEAD',
-      target: 'https://nas.acofork.com/',
-      statusPageLink: 'https://nas.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'gh_proxy_eo',
-      name: 'Github 代理（EdgeOne）',
-      method: 'HEAD',
-      target: 'https://gh.072103.xyz/',
-      statusPageLink: 'https://gh.072103.xyz/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'gh_proxy_cf',
-      name: 'Github 代理（Cloudflare）',
-      method: 'HEAD',
-      target: 'https://cf-gh.072103.xyz/',
-      statusPageLink: 'https://cf-gh.072103.xyz/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'eopfapi',
-      name: '随机图API（EdgeOne）',
-      method: 'HEAD',
-      target: 'https://eopfapi.acofork.com/pic/',
-      statusPageLink: 'https://eopfapi.acofork.com/pic/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'eo_umami',
-      name: 'Umami（EdgeOne Pages）',
-      method: 'HEAD',
-      target: 'https://eo-umami.acofork.com/',
-      statusPageLink: 'https://eo-umami.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'upload_to_s3',
-      name: '简单上传文件到S3（EdgeOne Pages）',
-      method: 'GET',
-      target: 'https://u.2x.nz/',
-      statusPageLink: 'https://u.2x.nz/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'onedrive_index',
-      name: 'OneDrive 公开只读（Vercel）',
-      method: 'HEAD',
-      target: 'https://e3.2x.nz/',
-      statusPageLink: 'https://e3.2x.nz/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'eo_http',
-      name: '网站安全测试（EdgeOne Pages）',
-      method: 'HEAD',
-      target: 'https://http.acofork.com/',
-      statusPageLink: 'https://http.acofork.com/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
-      id: 'yxvm_ssh',
-      name: 'YxVM SSH',
-      method: 'TCP_PING',
-      target: '46.232.60.28:22',
-      timeout: 5000,
     }
   ],
-  notification: {
-    // [Optional] Notification webhook settings, if not specified, no notification will be sent
-    // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
-    webhook: {
-      // [Required] webhook URL (example: Telegram Bot API)
-      url: 'https://api.resend.com/emails',
-      // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
-      method: 'POST',
-      // [Optional] headers to be sent
-      headers: {
-         'Authorization': 'Bearer ${env.RESEND_API_KEY}',
-         'Content-Type': 'application/json'
-      },
-      // [Required] Specify how to encode the payload
-      // Should be one of 'param', 'json' or 'x-www-form-urlencoded'
-      // 'param': append url-encoded payload to URL search parameters
-      // 'json': POST json payload as body, set content-type header to 'application/json'
-      // 'x-www-form-urlencoded': POST url-encoded payload as body, set content-type header to 'x-www-form-urlencoded'
-      payloadType: 'json',
-      // [Required] payload to be sent
-      // $MSG will be replaced with the human-readable notification message
-      payload: {
-        "from": "系统状态更新 <uptimeflare@update.2x.nz>",
-        "to": ["acofork@foxmail.com"],
-        "subject": "UptimeFlare 状态更新",
-        "text": "$MSG"
-      },
-      // [Optional] timeout calling this webhook, in millisecond, default to 5000
-      timeout: 10000,
-    },
-    // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    timeZone: 'Asia/Shanghai',
-    // [Optional] grace period in minutes before sending a notification
-    // notification will be sent only if the monitor is down for N continuous checks after the initial failure
-    // if not specified, notification will be sent immediately
-    //gracePeriod: 5,
-  },
   callbacks: {
     onStatusChange: async (
       env: any,
