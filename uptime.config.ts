@@ -53,17 +53,8 @@ const workerConfig: WorkerConfig = {
     //   //checkLocationWorkerRoute: 'https://xxx.example.com',
     // },
     {
-      id:'openlist_M1816',
-      name:'OpenList in termux(MeiZu M1816)',
-      method:'HEAD',
-      target:'https://list.netherwart.qzz.io/api/public/settings',
-      statusPageLink: 'https://list.netherwart.qzz.io/',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-    },
-    {
       id:'chat_nix',
-      name:'Spring in NixOS',
+      name:'Spring',
       method:'HEAD',
       target:'https://netherwart.qzz.io/api/chat/online',
       hideLatencyChart: false,
